@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: netflix-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: netflix-frontend
+  template:
+    metadata:
+      labels:
+        app: netflix-frontend
+    spec:
+      containers:
+        - name: frontend
+          image: famiamalik/netflix-frontend:latest
+          ports:
+            - containerPort: 80
+          env:
+            - name: VITE_APP_API_ENDPOINT_URL
+              value: "http://netflix-backend-svc:5000"

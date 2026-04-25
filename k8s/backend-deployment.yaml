@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: netflix-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: netflix-backend
+  template:
+    metadata:
+      labels:
+        app: netflix-backend
+    spec:
+      containers:
+        - name: backend
+          image: famiamalik/netflix-backend:latest
+          ports:
+            - containerPort: 5000
+          env:
+            - name: TMDB_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: tmdb-secret
+                  key: api-key
