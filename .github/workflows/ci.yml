@@ -25,6 +25,8 @@ jobs:
           file: ./frontend/Dockerfile
           push: true
           tags: famiamalik/netflix-frontend:${{ github.sha }}
+          build-args: |
+            TMDB_V3_API_KEY=${{ secrets.TMDB_API_KEY }}
 
       - name: Build and push backend image
         uses: docker/build-push-action@v5
