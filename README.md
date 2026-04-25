@@ -19,8 +19,6 @@
   - [Step 5: Access the Application](#step-5-access-the-application)
 - [CI/CD Flow](#cicd-flow)
 - [Kubernetes Manifests](#kubernetes-manifests)
-- [Security](#security)
-- [Team](#team)
 
 ---
 
