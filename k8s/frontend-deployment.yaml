@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: famiamalik/netflix-frontend:4832c2d281d9c5b551cb4f0ee47ff0626bf86098
+          image: famiamalik/netflix-frontend:3decea79f69c193c832b252a69fed7876ff4f260
           ports:
             - containerPort: 80
           env:
