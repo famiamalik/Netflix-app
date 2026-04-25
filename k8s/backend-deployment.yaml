@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: famiamalik/netflix-backend:dcacfae1f22742b7fe2b49437ab33274a437b399
+          image: famiamalik/netflix-backend:0f4f9586d60534abc4867602758725a27426033e
           ports:
             - containerPort: 5000
           env:
